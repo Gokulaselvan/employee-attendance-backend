@@ -10,7 +10,6 @@ class TestUserProfileModel(TestCase):
     def setUp(self) -> None:
 
         self.userprofile = baker.make(UserProfile)
-        print(vars(self.userprofile))
         return super().setUp()
 
     def test_create_usercount(self) -> None:
