@@ -6,7 +6,6 @@ from .views import registration_view, ChangePasswordView, UserViewset
 
 router = DefaultRouter()
 router.register(r'users', UserViewset)
-# router.register(r'users/change-password/<int:pk>/',)
 
 urlpatterns = [
     path('', include(router.urls)),
