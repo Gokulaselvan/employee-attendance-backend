@@ -19,6 +19,8 @@ class UserProfile(models.Model):
     date_of_birth = models.DateField(auto_now=False, auto_now_add=False)
     joining_date = models.DateField(auto_now=False, auto_now_add=False)
     experience = models.IntegerField()
+
+    # Need to change it as a foreign field
     shift = models.CharField(max_length=50)
 
     about = models.TextField()
