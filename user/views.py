@@ -7,6 +7,7 @@ from rest_framework.decorators import api_view
 from rest_framework.permissions import IsAuthenticated
 from rest_framework import generics
 from rest_framework import viewsets
+from rest_framework import status
 
 from .serializers import ChangePasswordSerializer, RegisterSerializer, UserSerializer
 
@@ -27,10 +28,11 @@ def registration_view(request):
             data['username'] = user.username
             data['employee_id'] = user.employee_id
 
+            return Response(data, status=status.HTTP_201_CREATED)
+
         else:
             data = serializer.errors
-
-        return Response(data)
+            return Response(data, status=status.HTTP_400_BAD_REQUEST)
 
 
 class ChangePasswordView(generics.UpdateAPIView):
