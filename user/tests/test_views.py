@@ -3,8 +3,6 @@ from rest_framework import status
 from rest_framework.test import APITestCase
 
 
-# from .test_setup import TestSetUp
-
 class TestUserRegister(APITestCase):
 
     def setUp(self) -> None:
