@@ -51,7 +51,3 @@ class CustomUserChangeForm(forms.ModelForm):
         fields = ['email', 'username', 'employee_id', 'password',
                   'is_active', 'is_admin', 'is_staff', 'is_superuser']
 
-    def clean_password(self):
-        """making the password not editable in the edit view"""
-
-        return self.initial["password"]
