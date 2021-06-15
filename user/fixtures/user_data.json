@@ -1,0 +1,104 @@
+[
+{
+    "model": "user.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$wIaW206Q2j8y74X6jdV3bS$/x+PC/8arzY3qnIaHo247qVut8KKbLJZrH6g1rU5GFQ=",
+        "last_login": "2021-06-06T10:33:20.904Z",
+        "username": "Gokulaselvan",
+        "email": "gokul@gmail.com",
+        "employee_id": "D10001",
+        "is_admin": true,
+        "is_active": true,
+        "is_staff": true,
+        "is_superuser": true,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "user.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$XIc7Arw33uJvfRuQqgnOg8$n/mFzmCyUpLNfMXKwnmJmvvw24Z6VO8Lbjn4ebq1K+U=",
+        "last_login": null,
+        "username": "GokulL",
+        "email": "gg@gmail.com",
+        "employee_id": "D10002",
+        "is_admin": false,
+        "is_active": true,
+        "is_staff": false,
+        "is_superuser": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "user.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$TgRFFPVwXX8zWvQMOO75Yn$Hce7KFbkSqsyfETw22QUn1bAEiV1ffAcSKKAV504iwc=",
+        "last_login": null,
+        "username": "Goku",
+        "email": "goku@gmail.com",
+        "employee_id": "D10003",
+        "is_admin": false,
+        "is_active": true,
+        "is_staff": false,
+        "is_superuser": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "user.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$S0BUe5ojxQCRbMtxgfUAMN$P67mCjdPeldUzSACuQjr6JPX34cEv/h4ECdNHgVpkzE=",
+        "last_login": null,
+        "username": "GG",
+        "email": "gokug@gmail.com",
+        "employee_id": "D10004",
+        "is_admin": false,
+        "is_active": true,
+        "is_staff": false,
+        "is_superuser": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "user.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$Dwjyp7GEFdlcfneYKatjWR$uuJAUCUpYGFe7CDsS7IrnW8wVMEdsyWV8Awcbex7l0Y=",
+        "last_login": null,
+        "username": "test",
+        "email": "test@test.com",
+        "employee_id": "DT0001",
+        "is_admin": true,
+        "is_active": true,
+        "is_staff": true,
+        "is_superuser": true,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "user.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$lZUV78chZhiGfJ7ICMWTHB$ZEOH7l93R8jBh47DMZFCgUrz74PshF7GPtfibb/ht44=",
+        "last_login": null,
+        "username": "ggGG",
+        "email": "gg@gg.com",
+        "employee_id": "D10005",
+        "is_admin": true,
+        "is_active": true,
+        "is_staff": true,
+        "is_superuser": true,
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]
