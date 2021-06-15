@@ -1,10 +1,7 @@
-from django.http import response
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
-
-# from .test_setup import TestSetUp
 
 class TestUserRegister(APITestCase):
 
