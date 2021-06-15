@@ -7,15 +7,7 @@ from rest_framework.authtoken.models import Token
 
 
 class UserManager(BaseUserManager):
-    def create_user(self, username, email, employee_id, password=None):
-        if not username:
-            raise ValueError("Users must have an username")
-        if not email:
-            raise ValueError("Users must have an Email Address")
-        if not employee_id:
-            raise ValueError("Users must have an Employee ID")
-        if not password:
-            raise ValueError("Users must have a Password")
+    def create_user(self, username, email, employee_id, password):
 
         user = self.model(
             email=self.normalize_email(email),

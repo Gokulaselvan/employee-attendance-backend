@@ -27,7 +27,7 @@ class CustomUserCreationForm(forms.ModelForm):
         retype_password = cleaned_data.get("retype_password")
 
         if password is not None and retype_password is not None and password != retype_password:
-            self.add_error("password_2", "Your passwords must match")
+            self.add_error("retype_password", "Your passwords must match")
         return cleaned_data
 
     def save(self, commit=True):
@@ -51,7 +51,3 @@ class CustomUserChangeForm(forms.ModelForm):
         fields = ['email', 'username', 'employee_id', 'password',
                   'is_active', 'is_admin', 'is_staff', 'is_superuser']
 
-    def clean_password(self):
-        """making the password not editable in the edit view"""
-
-        return self.initial["password"]
