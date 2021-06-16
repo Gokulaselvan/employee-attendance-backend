@@ -9,7 +9,7 @@ User = get_user_model()
 
 class UserProfile(models.Model):
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     # Need to change it as foreign key field
     designation = models.CharField(max_length=50)
