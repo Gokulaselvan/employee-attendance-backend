@@ -22,29 +22,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-# with open('./secrets.txt') as f:
-#     SECRET_KEY = f.read().strip()
+with open('./secrets.txt') as f:
+    SECRET_KEY = f.read().strip()
 
 # # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = SECRET_KEY
+SECRET_KEY = SECRET_KEY
 
 ALLOWED_HOSTS = ['*']
-
-if not DEBUG:
-    # setting change for production alone
-
-    ALLOWED_HOSTS = ['attendance-gxjx.herokuapp.com', ]
-
-    SECRET_KEY = os.environ("SECRET_KEY")
-
-    # DATABASES = {
-    #     'default': {
-    #         'ENGINE': 'django.db.backends.sqlite3',
-    #         'NAME': BASE_DIR / 'db.sqlite3',
-    #     }
-    # }
 
 
 # Application definition
@@ -79,15 +65,16 @@ REST_FRAMEWORK = {
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 ROOT_URLCONF = 'attendance.urls'
 
