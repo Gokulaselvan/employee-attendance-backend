@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     # custom apps
     'user',
     'userprofile',
+    'designation',
 ]
 
 AUTH_USER_MODEL = 'user.User'
