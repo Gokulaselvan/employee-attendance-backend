@@ -1,0 +1,38 @@
+[
+{
+   "model": "shift.shift",
+   "pk": 1,
+   "fields": {
+      "shift_name": "First",
+      "shift_timing_start": "06:00:00",
+      "shift_timing_end": "14:30:00"
+   }
+},
+{
+   "model": "shift.shift",
+   "pk": 2,
+   "fields": {
+      "shift_name": "General",
+      "shift_timing_start": "09:00:00",
+      "shift_timing_end": "17:30:00"
+   }
+},
+{
+   "model": "shift.shift",
+   "pk": 3,
+   "fields": {
+      "shift_name": "Second",
+      "shift_timing_start": "02:30:00",
+      "shift_timing_end": "23:00:00"
+   }
+},
+{
+   "model": "shift.shift",
+   "pk": 4,
+   "fields": {
+      "shift_name": "Night",
+      "shift_timing_start": "21:00:00",
+      "shift_timing_end": "05:30:00"
+   }
+}
+]
