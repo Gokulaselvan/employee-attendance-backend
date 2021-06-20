@@ -1,0 +1,86 @@
+[
+{
+   "model": "designation.designation",
+   "pk": 1,
+   "fields": {
+      "designation_name": "Project Manger"
+   }
+},
+{
+   "model": "designation.designation",
+   "pk": 2,
+   "fields": {
+      "designation_name": "Junior Data Scientist"
+   }
+},
+{
+   "model": "designation.designation",
+   "pk": 3,
+   "fields": {
+      "designation_name": "Design Engineer"
+   }
+},
+{
+   "model": "designation.designation",
+   "pk": 4,
+   "fields": {
+      "designation_name": "Subject Matter Expert"
+   }
+},
+{
+   "model": "designation.designation",
+   "pk": 5,
+   "fields": {
+      "designation_name": "Front End Engineer"
+   }
+},
+{
+   "model": "designation.designation",
+   "pk": 6,
+   "fields": {
+      "designation_name": "Back End Engineer"
+   }
+},
+{
+   "model": "designation.designation",
+   "pk": 7,
+   "fields": {
+      "designation_name": "UI Designer"
+   }
+},
+{
+   "model": "designation.designation",
+   "pk": 8,
+   "fields": {
+      "designation_name": "Team Leader"
+   }
+},
+{
+   "model": "designation.designation",
+   "pk": 9,
+   "fields": {
+      "designation_name": "UX Designer"
+   }
+},
+{
+   "model": "designation.department",
+   "pk": 1,
+   "fields": {
+      "department_name": "Development"
+   }
+},
+{
+   "model": "designation.department",
+   "pk": 2,
+   "fields": {
+      "department_name": "Design"
+   }
+},
+{
+   "model": "designation.department",
+   "pk": 3,
+   "fields": {
+      "department_name": "Testing"
+   }
+}
+]
