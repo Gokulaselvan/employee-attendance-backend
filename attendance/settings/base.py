@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'user',
     'userprofile',
     'designation',
+    'shift',
 ]
 
 AUTH_USER_MODEL = 'user.User'
