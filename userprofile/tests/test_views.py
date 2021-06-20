@@ -6,6 +6,8 @@ from rest_framework.test import APITestCase
 
 class TestUserProfileView(APITestCase):
 
+    fixtures = ['designation/fixtures/design_depart_fixture.json']
+
     def setUp(self) -> None:
 
         self.register_url = reverse('register')
@@ -28,8 +30,8 @@ class TestUserProfileView(APITestCase):
 
         self.data = {
             "user": 1,
-            "designation": "Manager",
-            "department": "design",
+            "designation": 1,
+            "department": 1,
             "date_of_birth": "1994-12-12",
             "joining_date": "2000-12-12",
             "experience": 23,
@@ -39,8 +41,8 @@ class TestUserProfileView(APITestCase):
 
         self.wrong_data = {
             "user": 1,
-            "designation": "Manager",
-            "department": "design",
+            "designation": 1,
+            "department": 1,
             "date_of_birth": "2000-12-12",
             "joining_date": "1994-12-12",
             "experience": 34,
@@ -49,7 +51,7 @@ class TestUserProfileView(APITestCase):
         }
 
         self.profile_patch_data = {
-            "department": "Design",
+            "department": 2,
             "shift": "Evening",
             "about": "Im a Great manager"
         }
@@ -109,7 +111,7 @@ class TestUserProfileView(APITestCase):
                               {"HTTP_AUTHORIZATION": "Token {}".format(self.token_key)})
 
         self.assertEqual(res.status_code, status.HTTP_200_OK)
-        self.assertEqual(res.data['designation'], "Manager")
+        self.assertEqual(res.data['designation'], 1)
 
     def test_check_users_can_update_detail(self) -> None:
 
@@ -118,9 +120,12 @@ class TestUserProfileView(APITestCase):
 
         res = self.client.patch(self.profile_list_url_detail, self.profile_patch_data, **
                                 {"HTTP_AUTHORIZATION": "Token {}".format(self.token_key)})
+        
+        # import pdb
+        # pdb.set_trace()
 
         self.assertEqual(res.status_code, status.HTTP_200_OK)
-        self.assertEqual(res.data['department'], "Design")
+        self.assertEqual(res.data['department'], 2)
         self.assertEqual(res.data['shift'], "Evening")
         self.assertEqual(res.data['about'], "Im a Great manager")
 
