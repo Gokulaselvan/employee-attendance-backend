@@ -220,3 +220,5 @@ db.sqlite3
 
 .coverage
 *htmlcov
+
+**/profile_pics/**
