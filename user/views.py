@@ -34,6 +34,12 @@ def registration_view(request):
             data = serializer.errors
             return Response(data, status=status.HTTP_400_BAD_REQUEST)
 
+@api_view(['GET'])
+def logout_view(request):
+
+    request.user.auth_token.delete()
+    return Response(data={"success": "Successfully Logged out"}, status=status.HTTP_204_NO_CONTENT)
+
 
 class ChangePasswordView(generics.UpdateAPIView):
 
