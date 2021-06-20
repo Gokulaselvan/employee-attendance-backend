@@ -1,10 +1,10 @@
-from designation.models import Designation, Department
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.contrib.auth import get_user_model
-
 from django.core.validators import MaxValueValidator
 
+from designation.models import Designation, Department
+from shift.models import Shift
 User = get_user_model()
 
 
@@ -22,8 +22,7 @@ class UserProfile(models.Model):
     experience = models.PositiveIntegerField(
         default=0, validators=[MaxValueValidator(limit_value=99)])
 
-    # Need to change it as a foreign field
-    shift = models.CharField(max_length=50)
+    shift = models.ForeignKey(Shift, on_delete=models.RESTRICT)
 
     about = models.TextField(max_length=254)
 

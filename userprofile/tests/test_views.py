@@ -124,7 +124,7 @@ class TestUserProfileView(APITestCase):
 
         self.assertEqual(res.status_code, status.HTTP_200_OK)
         self.assertEqual(res.data['department'], 2)
-        self.assertEqual(res.data['shift'], str(2))
+        self.assertEqual(res.data['shift'], 2)
         self.assertEqual(res.data['about'], "Im a Great manager")
 
     def test_check_auth_users_can_delete(self) -> None:
