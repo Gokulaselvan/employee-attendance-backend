@@ -6,7 +6,8 @@ from rest_framework.test import APITestCase
 
 class TestUserProfileView(APITestCase):
 
-    fixtures = ['designation/fixtures/design_depart_fixture.json']
+    fixtures = ['designation/fixtures/design_depart_fixture.json',
+                'shift/fixtures/shift_fixtures.json']
 
     def setUp(self) -> None:
 
@@ -35,7 +36,7 @@ class TestUserProfileView(APITestCase):
             "date_of_birth": "1994-12-12",
             "joining_date": "2000-12-12",
             "experience": 23,
-            "shift": "Morning",
+            "shift": 2,
             "about": "im a good manager"
         }
 
@@ -46,13 +47,13 @@ class TestUserProfileView(APITestCase):
             "date_of_birth": "2000-12-12",
             "joining_date": "1994-12-12",
             "experience": 34,
-            "shift": "Morning",
+            "shift": 1,
             "about": "im a good manager"
         }
 
         self.profile_patch_data = {
             "department": 2,
-            "shift": "Evening",
+            "shift": 2,
             "about": "Im a Great manager"
         }
 
@@ -120,13 +121,10 @@ class TestUserProfileView(APITestCase):
 
         res = self.client.patch(self.profile_list_url_detail, self.profile_patch_data, **
                                 {"HTTP_AUTHORIZATION": "Token {}".format(self.token_key)})
-        
-        # import pdb
-        # pdb.set_trace()
 
         self.assertEqual(res.status_code, status.HTTP_200_OK)
         self.assertEqual(res.data['department'], 2)
-        self.assertEqual(res.data['shift'], "Evening")
+        self.assertEqual(res.data['shift'], str(2))
         self.assertEqual(res.data['about'], "Im a Great manager")
 
     def test_check_auth_users_can_delete(self) -> None:
