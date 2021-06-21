@@ -6,9 +6,8 @@ from rest_framework.routers import DefaultRouter
 from . import views
 
 routers = DefaultRouter()
-routers.register(r'designation', views.DesignationViewsets,
-                 basename='designation')
-routers.register(r'department', views.DepartmentViewsets, basename='department')
+routers.register(r'', views.ShiftViewset,
+                 basename='shift')
 
 
 urlpatterns = [
