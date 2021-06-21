@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('user/', include('user.urls')),
     path('profile/', include('userprofile.urls')),
+    path('utils/', include('designation.urls')),
     path('api/', include('rest_framework.urls', namespace='rest_framework'))
 ]
 
